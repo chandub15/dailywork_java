@@ -9,18 +9,17 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         int c = 0;
-        // pass the path to the file as a parameter
-        File file =
-                new File("C:\\Users\\ChandraPBommadevara\\Desktop\\STACKROUTE\\dailywork_java\\test.txt");
+
+        File file = new File("C:\\Users\\ChandraPBommadevara\\Desktop\\STACKROUTE\\dailywork_java\\test.txt");
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
-
-
         String line;
         while((line = reader.readLine()) != null)
         {
                 String s = line.trim();
                 System.out.println(s);
+                System.out.println(s.toUpperCase());
                 String str= s.replaceAll("\\s+","");
+
                 int count =str.length();
                 System.out.println("length of file:"+ count);
 
